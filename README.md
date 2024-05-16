@@ -1,6 +1,6 @@
-# QR Code Styled
+# Custom QR Code
 
-[![Version](https://img.shields.io/npm/v/qr-code-styled.svg)](https://www.npmjs.org/package/qr-code-styled)
+[![Version](https://img.shields.io/npm/v/custom-qr-code.svg)](https://www.npmjs.org/package/custom-qr-code)
 
 JavaScript library for generating QR codes with a logo and styling.
 
@@ -10,7 +10,6 @@ This is a fork of the currently unmaintained [repository by kozakdenys](https://
 - outdated dependencies
 - release for es2017
 - migrated from webpack to vite
-
 
 Try the old version here https://qr-code-styling.com to get a feel
 
@@ -25,13 +24,13 @@ Try the old version here https://qr-code-styling.com to get a feel
 ### Installation
 
 ```
-npm install qr-code-styled
+npm install custom-qr-code
 ```
 
 or
 
 ```
-yarn add qr-code-styled
+yarn add custom-qr-code
 ```
 
 ### Usage
@@ -48,7 +47,7 @@ yarn add qr-code-styled
 <div id="canvas"></div>
 <script type="text/javascript">
 
-    const qrCode = new QRCodeStyling({
+    const qrCode = new CustomQRCode({
         width: 300,
         height: 300,
         type: "svg",
@@ -92,7 +91,7 @@ yarn add qr-code-styled
 
 ### API Documentation
 
-#### QRCodeStyling instance
+#### CustomQRCode instance
 
 `new QRCodeStyling(options) => QRCodeStyling`
 

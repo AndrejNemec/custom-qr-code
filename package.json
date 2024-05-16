@@ -1,5 +1,5 @@
 {
-	"name": "qr-code-styled",
+	"name": "custom-qr-code",
 	"version": "1.0.0",
 	"description": "Add a style and an image to your QR code",
 	"files": ["dist", "LICENSE"],
@@ -7,6 +7,7 @@
 	"types": "dist/esm/index.d.ts",
 	"main": "dist/cjs/index.cjs",
 	"module": "dist/esm/index.js",
+	"private": false,
 	"exports": {
 		".": {
 			"import": {
@@ -39,7 +40,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/AndrejNemec/qr-code-styled"
+		"url": "git+https://github.com/AndrejNemec/custom-qr-code"
 	},
 	"keywords": [
 		"qr",
@@ -72,7 +73,7 @@
 	],
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/AndrejNemec/qr-code-styled/issues"
+		"url": "https://github.com/AndrejNemec/custom-qr-code/issues"
 	},
-	"homepage": "https://github.com/AndrejNemec/qr-code-styled"
+	"homepage": "https://github.com/AndrejNemec/custom-qr-code"
 }
