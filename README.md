@@ -10,6 +10,7 @@ This is a fork of the currently unmaintained [repository by kozakdenys](https://
 - outdated dependencies
 - release for es2017
 - migrated from webpack to vite
+- added support for react (`import { CustomQRCode } from 'custom-qr-code/react'`)
 
 Try the old version here https://qr-code-styling.com to get a feel
 
