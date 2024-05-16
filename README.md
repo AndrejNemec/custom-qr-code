@@ -35,6 +35,39 @@ yarn add custom-qr-code
 
 ### Usage
 
+**React**
+
+```tsx
+import { CustomQRCode } from 'custom-qr-code/react'
+
+export const App = () => {
+    return (
+        <CustomQRCode
+            {....{
+                width: 300,
+                height: 300,
+                type: "svg",
+                data: "https://www.facebook.com/",
+                image: "https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg",
+                dotsOptions: {
+                    color: "#4267b2",
+                    type: "rounded"
+                },
+                backgroundOptions: {
+                    color: "#e9ebee",
+                },
+                imageOptions: {
+                    crossOrigin: "anonymous",
+                    margin: 20
+                }
+            }}
+        />
+    )
+}
+```
+
+**Classic:**
+
 ```HTML
 <!DOCTYPE html>
 <html lang="en">

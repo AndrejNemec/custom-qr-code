@@ -1,5 +1,5 @@
 import CustomQRCode from '../core/CustomQRCode'
-import type { DotType, Options } from '../types'
+import type { DotType, Options } from '../core/types'
 
 const options: Partial<Options> = {
 	width: 300,

@@ -6,7 +6,6 @@ import tsconfigPaths from 'vite-tsconfig-paths'
 
 const buildOutputDir = 'dist'
 const rootDir = './src'
-const entryFile = `${rootDir}/index.ts`
 
 // https://vitejs.dev/config/
 const config = defineConfig({
@@ -24,6 +23,7 @@ const buildConfig = defineConfig({
 			outDir: `${buildOutputDir}/esm`,
 			entryRoot: rootDir,
 			include: rootDir,
+			exclude: `${rootDir}/dev`,
 			compilerOptions: {
 				// @ts-expect-error
 				module: 'esnext',
@@ -34,6 +34,7 @@ const buildConfig = defineConfig({
 			outDir: `${buildOutputDir}/cjs`,
 			entryRoot: rootDir,
 			include: rootDir,
+			exclude: `${rootDir}/dev`,
 			compilerOptions: {
 				// @ts-expect-error
 				module: 'commonjs',
@@ -46,7 +47,7 @@ const buildConfig = defineConfig({
 		minify: true,
 		sourcemap: true,
 		lib: {
-			entry: entryFile,
+			entry: [`${rootDir}/core/index.ts`, `${rootDir}/react/index.ts`],
 			formats: ['es', 'cjs'],
 			fileName: (format) => {
 				if (format === 'cjs') return 'cjs/[name].cjs'

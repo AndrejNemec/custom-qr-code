@@ -1,4 +1,4 @@
-import type { RequiredOptions } from '../core/QROptions'
+import type { RequiredOptions } from '../QROptions'
 import type { Gradient } from '../types'
 
 function sanitizeGradient(gradient: Gradient): Gradient {

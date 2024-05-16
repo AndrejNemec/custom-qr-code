@@ -1,7 +1,7 @@
-import drawTypes from '../constants/drawTypes'
-import errorCorrectionLevels from '../constants/errorCorrectionLevels'
-import qrTypes from '../constants/qrTypes'
-import type { DotType, DrawType, ErrorCorrectionLevel, Gradient, Mode, Options, TypeNumber } from '../types'
+import drawTypes from './constants/drawTypes'
+import errorCorrectionLevels from './constants/errorCorrectionLevels'
+import qrTypes from './constants/qrTypes'
+import type { DotType, DrawType, ErrorCorrectionLevel, Gradient, Mode, Options, TypeNumber } from './types'
 
 export interface RequiredOptions extends Options {
 	type: DrawType

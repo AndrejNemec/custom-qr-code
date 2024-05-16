@@ -1,3 +1,4 @@
+import CustomQRCode from './CustomQRCode'
 import cornerDotTypes from './constants/cornerDotTypes'
 import cornerSquareTypes from './constants/cornerSquareTypes'
 import dotTypes from './constants/dotTypes'
@@ -6,7 +7,6 @@ import errorCorrectionLevels from './constants/errorCorrectionLevels'
 import errorCorrectionPercents from './constants/errorCorrectionPercents'
 import modes from './constants/modes'
 import qrTypes from './constants/qrTypes'
-import CustomQRCode from './core/CustomQRCode'
 
 export * from './types'
 

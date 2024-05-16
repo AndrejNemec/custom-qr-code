@@ -1,13 +1,13 @@
 import qrcode from 'qrcode-generator'
-import drawTypes from '../constants/drawTypes'
-import downloadURI from '../tools/downloadURI'
-import getMode from '../tools/getMode'
-import mergeDeep from '../tools/merge'
-import sanitizeOptions from '../tools/sanitizeOptions'
-import type { DownloadOptions, Extension, Options, QRCode } from '../types'
 import QRCanvas from './QRCanvas'
 import defaultOptions, { type RequiredOptions } from './QROptions'
 import QRSVG from './QRSVG'
+import drawTypes from './constants/drawTypes'
+import downloadURI from './tools/downloadURI'
+import getMode from './tools/getMode'
+import mergeDeep from './tools/merge'
+import sanitizeOptions from './tools/sanitizeOptions'
+import type { DownloadOptions, Extension, Options, QRCode } from './types'
 
 export default class CustomQRCode {
 	_options: RequiredOptions
