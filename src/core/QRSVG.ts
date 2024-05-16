@@ -28,6 +28,9 @@ const dotMask = [
 ]
 
 export default class QRSVG {
+	static _id = 0
+
+	_id: number
 	_element: SVGElement
 	_style: SVGStyleElement
 	_defs: SVGElement
@@ -44,10 +47,12 @@ export default class QRSVG {
 
 	//TODO don't pass all options to this class
 	constructor(options: RequiredOptions) {
+		this._id = QRSVG._id++
 		this._element = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
 		this._element.setAttribute('width', String(options.width))
 		this._element.setAttribute('height', String(options.height))
 		this._element.setAttribute('xmlns:xlink', 'http://www.w3.org/1999/xlink')
+		this._element.setAttribute('data-internal-uid', this.id)
 		this._defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs')
 		this._style = document.createElementNS('http://www.w3.org/2000/svg', 'style')
 
@@ -60,6 +65,10 @@ export default class QRSVG {
 
 	get height(): number {
 		return this._options.height
+	}
+
+	get id(): string {
+		return `svg_qr_${this._id}`
 	}
 
 	getElement(): SVGElement {
@@ -575,6 +584,6 @@ export default class QRSVG {
 	}
 
 	_createStyle({ color, name }: { color?: string; name: string }): void {
-		this._style.innerHTML += `.${name}{ fill: ${color}; }`
+		this._style.innerHTML += `[data-internal-uid="${this.id}"] .${name}{ fill: ${color}; }`
 	}
 }

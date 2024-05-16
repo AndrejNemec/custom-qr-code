@@ -4,6 +4,7 @@ import type { DotType, Options } from '../types'
 const options: Partial<Options> = {
 	width: 300,
 	height: 300,
+	type: 'svg',
 	data: 'https://google.com',
 	image: 'https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg',
 	dotsOptions: {
@@ -13,6 +14,10 @@ const options: Partial<Options> = {
 	cornersSquareOptions: {
 		type: 'square',
 		color: '#321ccc',
+	},
+	cornersDotOptions: {
+		type: 'square',
+		color: '#7de88e',
 	},
 	imageOptions: {
 		crossOrigin: 'anonymous',
