@@ -1,6 +1,6 @@
-import { GradientTypes } from "../types";
+import type { GradientTypes } from '../types'
 
 export default {
-  radial: "radial",
-  linear: "linear"
-} as GradientTypes;
+	radial: 'radial',
+	linear: 'linear',
+} as GradientTypes

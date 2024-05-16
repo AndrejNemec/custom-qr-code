@@ -1,12 +1,12 @@
-import { Mode } from "../types";
+import type { Mode } from '../types'
 
 interface Modes {
-  [key: string]: Mode;
+	[key: string]: Mode
 }
 
 export default {
-  numeric: "Numeric",
-  alphanumeric: "Alphanumeric",
-  byte: "Byte",
-  kanji: "Kanji"
-} as Modes;
+	numeric: 'Numeric',
+	alphanumeric: 'Alphanumeric',
+	byte: 'Byte',
+	kanji: 'Kanji',
+} as Modes
