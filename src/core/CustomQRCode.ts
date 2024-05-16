@@ -9,7 +9,7 @@ import QRCanvas from './QRCanvas'
 import defaultOptions, { type RequiredOptions } from './QROptions'
 import QRSVG from './QRSVG'
 
-export default class QRCodeStyled {
+export default class CustomQRCode {
 	_options: RequiredOptions
 	_container?: HTMLElement
 	_canvas?: QRCanvas
@@ -67,7 +67,7 @@ export default class QRCodeStyled {
 	}
 
 	update(options?: Partial<Options>): void {
-		QRCodeStyled._clearContainer(this._container)
+		CustomQRCode._clearContainer(this._container)
 		this._options = options ? sanitizeOptions(mergeDeep(this._options, options) as RequiredOptions) : this._options
 
 		if (!this._options.data) {

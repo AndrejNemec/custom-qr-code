@@ -1,4 +1,4 @@
-import QRCodeStyled from '../core/QRCodeStyled'
+import CustomQRCode from '../core/CustomQRCode'
 import type { DotType, Options } from '../types'
 
 const options: Partial<Options> = {
@@ -33,7 +33,7 @@ dotOptions.forEach((_, i) => {
 		color: color[i],
 	}
 
-	const qrCode = new QRCodeStyled(options)
+	const qrCode = new CustomQRCode(options)
 	if (container) {
 		qrCode.append(container)
 	}
@@ -54,7 +54,7 @@ dotOptions.forEach((_, i) => {
 		color: color[i],
 	}
 
-	const qrCode = new QRCodeStyled(options)
+	const qrCode = new CustomQRCode(options)
 	if (container2) {
 		qrCode.append(container2)
 	}

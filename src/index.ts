@@ -6,7 +6,7 @@ import errorCorrectionLevels from './constants/errorCorrectionLevels'
 import errorCorrectionPercents from './constants/errorCorrectionPercents'
 import modes from './constants/modes'
 import qrTypes from './constants/qrTypes'
-import QRCodeStyled from './core/QRCodeStyled'
+import CustomQRCode from './core/CustomQRCode'
 
 export * from './types'
 
@@ -19,5 +19,5 @@ export {
 	modes,
 	qrTypes,
 	drawTypes,
-	QRCodeStyled,
+	CustomQRCode,
 }
