@@ -137,6 +137,8 @@ export type Options = {
 	useLegacyDotRotation?: boolean
 }
 
+export type CustomQRCodeOptions = Options
+
 export type FilterFunction = (i: number, j: number) => boolean
 
 export type DownloadOptions = {

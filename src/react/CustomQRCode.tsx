@@ -1,8 +1,10 @@
 import { type CSSProperties, type HTMLAttributes, forwardRef, useEffect, useImperativeHandle, useRef } from 'react'
 import CustomQRCodeClass from './../core/CustomQRCode'
-import type { Options } from './../core/types'
+import type { CustomQRCodeOptions } from './../core/types'
 
-export interface CustomQRCodeProps extends Partial<Options> {
+export type { CustomQRCodeOptions }
+
+export interface CustomQRCodeProps extends Partial<CustomQRCodeOptions> {
     id?: string
     className?: string
     style?: CSSProperties
