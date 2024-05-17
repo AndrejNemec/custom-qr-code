@@ -267,4 +267,4 @@ Gradient colorStops structure
 
 ### License
 
-[MIT License](https://raw.githubusercontent.com/kozakdenys/qr-code-styling/master/LICENSE). Copyright (c) 2021 Denys Kozak
+[MIT License](https://github.com/AndrejNemec/custom-qr-code/raw/main/LICENSE). Copyright (c) 2024 Andrej Nemec
