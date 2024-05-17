@@ -1,8 +1,8 @@
 {
 	"name": "custom-qr-code",
-	"version": "1.1.3",
+	"version": "1.1.4",
 	"description": "Add a style and an image to your QR code",
-	"files": ["dist", "LICENSE"],
+	"files": ["dist", "LICENSE", "README.md"],
 	"type": "module",
 	"types": "dist/esm/core/index.d.ts",
 	"main": "dist/cjs/core/index.cjs",

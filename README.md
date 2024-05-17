@@ -24,11 +24,19 @@ Try the old version here https://qr-code-styling.com to get a feel
 
 ### Installation
 
+**NPM:**
+
 ```
 npm install custom-qr-code
 ```
 
-or
+**PNPM:**
+
+```
+pnpm install custom-qr-code
+```
+
+**YARN:**
 
 ```
 yarn add custom-qr-code
@@ -39,32 +47,33 @@ yarn add custom-qr-code
 **React**
 
 ```tsx
-import { CustomQRCode } from 'custom-qr-code/react'
+import { CustomQRCode } from "custom-qr-code/react";
 
 export const App = () => {
-    return (
-        <CustomQRCode
-            {....{
-                width: 300,
-                height: 300,
-                type: "svg",
-                data: "https://www.facebook.com/",
-                image: "https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg",
-                dotsOptions: {
-                    color: "#4267b2",
-                    type: "rounded"
-                },
-                backgroundOptions: {
-                    color: "#e9ebee",
-                },
-                imageOptions: {
-                    crossOrigin: "anonymous",
-                    margin: 20
-                }
-            }}
-        />
-    )
-}
+  return (
+    <CustomQRCode
+      className="qr-container-class"
+      style={{ margin: "0 auto" }}
+      containerProps={{ "aria-label": "FB QR Code" }}
+      width={300}
+      height={300}
+      type="svg"
+      data="https://www.facebook.com/"
+      image="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+      dotsOptions={{
+        color: "#4267b2",
+        type: "rounded",
+      }}
+      backgroundOptions={{
+        color: "#e9ebee",
+      }}
+      imageOptions={{
+        crossOrigin: "anonymous",
+        margin: 20,
+      }}
+    />
+  );
+};
 ```
 
 **Classic:**
@@ -72,62 +81,47 @@ export const App = () => {
 ```HTML
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>QR Code Styling</title>
-    <script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
 </head>
+
 <body>
-<div id="canvas"></div>
-<script type="text/javascript">
-
-    const qrCode = new CustomQRCode({
-        width: 300,
-        height: 300,
-        type: "svg",
-        data: "https://www.facebook.com/",
-        image: "https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg",
-        dotsOptions: {
-            color: "#4267b2",
-            type: "rounded"
-        },
-        backgroundOptions: {
-            color: "#e9ebee",
-        },
-        imageOptions: {
-            crossOrigin: "anonymous",
-            margin: 20
-        }
-    });
-
-    qrCode.append(document.getElementById("canvas"));
-    qrCode.download({ name: "qr", extension: "svg" });
-</script>
+    <div id="canvas"></div>
+    <script type="module">
+        import { CustomQRCode } from 'https://esm.sh/custom-qr-code'
+        const qrCode = new CustomQRCode({
+            width: 300,
+            height: 300,
+            type: "svg",
+            data: "https://www.facebook.com/",
+            image: "https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg",
+            dotsOptions: {
+                color: "#4267b2",
+                type: "rounded"
+            },
+            backgroundOptions: {
+                color: "#e9ebee",
+            },
+            imageOptions: {
+                crossOrigin: "anonymous",
+                margin: 20
+            }
+        });
+        qrCode.append(document.getElementById("canvas"));
+        qrCode.download({ name: "qr", extension: "svg" });
+    </script>
 </body>
+
 </html>
 ```
-
----
-
-[**React example (Codesandbox)**](https://codesandbox.io/s/qr-code-styling-react-example-l8rwl?file=/src/App.js)
-
-[**Angular example (Codesandbox)**](https://codesandbox.io/s/agitated-panini-tpgb2?file=/src/app/app.component.ts)
-
----
-
-[**React example (source)**](https://github.com/kozakdenys/qr-code-styling-examples/tree/master/examples/react)
-
-[**Angular example (source)**](https://github.com/kozakdenys/qr-code-styling-examples/tree/master/examples/angular)
-
-[**Vue example (source)**](https://github.com/kozakdenys/qr-code-styling-examples/tree/master/examples/vue)
-
----
 
 ### API Documentation
 
 #### CustomQRCode instance
 
-`new QRCodeStyling(options) => QRCodeStyling`
+`new CustomQRCode(options) => CustomQRCode`
 
 | Param   | Type   | Description |
 | ------- | ------ | ----------- |
@@ -230,27 +224,27 @@ Gradient colorStops structure
 | offset   | number (`0 - 1`) |               | Position of color in gradient range |
 | color    | string           |               | Color of stop in gradient range     |
 
-#### QRCodeStyling methods
+#### CustomQRCode methods
 
-`QRCodeStyling.append(container) => void`
+`CustomQRCode.append(container) => void`
 
 | Param     | Type        | Description                                              |
 | --------- | ----------- | -------------------------------------------------------- |
 | container | DOM element | This container will be used for appending of the QR code |
 
-`QRCodeStyling.getRawData(extension) => Promise<Blob>`
+`CustomQRCode.getRawData(extension) => Promise<Blob>`
 
 | Param     | Type                                 | Default Value | Description |
 | --------- | ------------------------------------ | ------------- | ----------- |
 | extension | string (`'png' 'jpeg' 'webp' 'svg'`) | `'png'`       | Blob type   |
 
-`QRCodeStyling.update(options) => void`
+`CustomQRCode.update(options) => void`
 
 | Param   | Type   | Description                            |
 | ------- | ------ | -------------------------------------- |
 | options | object | The same options as for initialization |
 
-`QRCodeStyling.download(downloadOptions, quality) => Promise<void>`
+`CustomQRCode.download(downloadOptions, quality) => Promise<void>`
 
 | Param           | Type   | Description                                                                                                                                                                                                                                                                                                 |
 | --------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -264,7 +258,7 @@ Gradient colorStops structure
 | name      | string                               | `'qr'`        | Name of the downloaded file |
 | extension | string (`'png' 'jpeg' 'webp' 'svg'`) | `'png'`       | File extension              |
 
-`QRCodeStyling.toDataUrl(extension, quality) => Promise<void>`
+`CustomQRCode.toDataUrl(extension, quality) => Promise<void>`
 
 | Param     | Type                           | Default Value | Description                                                                                                                                                                                                                                                                                                  |
 | --------- | ------------------------------ | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
