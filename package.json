@@ -1,109 +1,114 @@
 {
-	"name": "custom-qr-code",
-	"version": "1.1.5",
-	"description": "Add a style and an image to your QR code",
-	"files": ["dist", "LICENSE", "README.md"],
-	"type": "module",
-	"types": "dist/esm/core/index.d.ts",
-	"main": "dist/cjs/core/index.cjs",
-	"module": "dist/esm/core/index.js",
-	"private": false,
-	"exports": {
-		".": {
-			"import": {
-				"types": "./dist/esm/core/index.d.ts",
-				"default": "./dist/esm/core/index.js"
-			},
-			"require": {
-				"types": "./dist/cjs/core/index.d.cts",
-				"default": "./dist/cjs/core/index.cjs"
-			}
-		},
-		"./react": {
-			"import": {
-				"types": "./dist/esm/react/index.d.ts",
-				"default": "./dist/esm/react/index.js"
-			},
-			"require": {
-				"types": "./dist/cjs/react/index.d.cts",
-				"default": "./dist/cjs/react/index.cjs"
-			}
-		},
-		"./package.json": "./package.json"
-	},
-	"dependencies": {
-		"qrcode-generator": "^1.4.4"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "^1.7.3",
-		"canvas": "^2.11.2",
-		"rollup-plugin-preserve-directives": "^0.4.0",
-		"typescript": "^5.4.5",
-		"vite": "^5.2.11",
-		"vite-plugin-dts": "^3.9.1",
-		"vite-plugin-externalize-deps": "^0.8.0",
-		"vite-tsconfig-paths": "^4.3.2",
-		"react": "^18.3.1",
-		"react-dom": "^18.3.1",
-		"@types/react": "^18.3.2",
-		"@types/react-dom": "^18.3.0"
-	},
-	"peerDependencies": {
-		"react": "^18",
-		"react-dom": "^18"
-	},
-	"peerDependenciesMeta": {
-		"react": {
-			"optional": true
-		},
-		"react-dom": {
-			"optional": true
-		}
-	},
-	"scripts": {
-		"build": "vite build",
-		"dev": "vite dev"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/AndrejNemec/custom-qr-code"
-	},
-	"keywords": [
-		"qr",
-		"qrcode",
-		"qr-code",
-		"js",
-		"qrjs",
-		"qrstyling",
-		"styling",
-		"qrbranding",
-		"branding",
-		"qrimage",
-		"image",
-		"qrlogo",
-		"logo",
-		"design",
-		"react",
-		"reactqr",
-		"reactqrcode",
-		"styledqr"
-	],
-	"author": {
-		"name": "Andrej Nemec"
-	},
-	"contributors": [
-		{
-			"name": "Denys Kozak",
-			"email": "kozak.denys.dev@gmail.com"
-		},
-		{
-			"name": "Kilian Brachtendorf",
-			"email": "kilian@brachtendorf.dev"
-		}
-	],
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/AndrejNemec/custom-qr-code/issues"
-	},
-	"homepage": "https://github.com/AndrejNemec/custom-qr-code"
+  "name": "custom-qr-code",
+  "version": "2.0.0",
+  "description": "Add a style and an image to your QR code",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "type": "module",
+  "types": "dist/esm/core/index.d.ts",
+  "main": "dist/cjs/core/index.cjs",
+  "module": "dist/esm/core/index.js",
+  "private": false,
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/core/index.d.ts",
+        "default": "./dist/esm/core/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/core/index.d.cts",
+        "default": "./dist/cjs/core/index.cjs"
+      }
+    },
+    "./react": {
+      "import": {
+        "types": "./dist/esm/react/index.d.ts",
+        "default": "./dist/esm/react/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/react/index.d.cts",
+        "default": "./dist/cjs/react/index.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "qrcode-generator": "^1.5.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "canvas": "^3.1.0",
+    "rollup-plugin-preserve-directives": "^0.4.0",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5",
+    "vite-plugin-dts": "^4.5.4",
+    "vite-plugin-externalize-deps": "^0.9.0",
+    "vite-tsconfig-paths": "^5.1.4",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "@types/react": "^19.1.6",
+    "@types/react-dom": "^19.1.6"
+  },
+  "peerDependencies": {
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    }
+  },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndrejNemec/custom-qr-code"
+  },
+  "keywords": [
+    "qr",
+    "qrcode",
+    "qr-code",
+    "js",
+    "qrjs",
+    "qrstyling",
+    "styling",
+    "qrbranding",
+    "branding",
+    "qrimage",
+    "image",
+    "qrlogo",
+    "logo",
+    "design",
+    "react",
+    "reactqr",
+    "reactqrcode",
+    "styledqr"
+  ],
+  "author": {
+    "name": "Andrej Nemec"
+  },
+  "contributors": [
+    {
+      "name": "Denys Kozak",
+      "email": "kozak.denys.dev@gmail.com"
+    },
+    {
+      "name": "Kilian Brachtendorf",
+      "email": "kilian@brachtendorf.dev"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AndrejNemec/custom-qr-code/issues"
+  },
+  "homepage": "https://github.com/AndrejNemec/custom-qr-code",
+  "packageManager": "pnpm@10.12.1"
 }

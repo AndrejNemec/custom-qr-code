@@ -24,21 +24,33 @@ Try the old version here https://qr-code-styling.com to get a feel
 
 ### Installation
 
-**NPM:**
+#### React 18
 
+Use version 1.1.5:
+
+```bash
+# NPM
+npm install custom-qr-code@1.1.5
+
+# PNPM
+pnpm install custom-qr-code@1.1.5
+
+# Yarn
+yarn add custom-qr-code@1.1.5
 ```
+
+#### React 19 (or non-React usage)
+
+Use latest version:
+
+```bash
+# NPM
 npm install custom-qr-code
-```
 
-**PNPM:**
-
-```
+# PNPM
 pnpm install custom-qr-code
-```
 
-**YARN:**
-
-```
+# Yarn
 yarn add custom-qr-code
 ```
 

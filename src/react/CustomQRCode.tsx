@@ -1,55 +1,103 @@
-import { type CSSProperties, type HTMLAttributes, forwardRef, useEffect, useImperativeHandle, useRef } from 'react'
-import CustomQRCodeClass from './../core/CustomQRCode'
-import type { CustomQRCodeOptions } from './../core/types'
+import { type CSSProperties, type HTMLAttributes, forwardRef, useEffect, useImperativeHandle, useRef } from "react";
+import CustomQRCodeClass from "./../core/CustomQRCode";
+import type { CustomQRCodeOptions } from "./../core/types";
 
-export type { CustomQRCodeOptions }
+export type { CustomQRCodeOptions };
 
 export interface CustomQRCodeProps extends Partial<CustomQRCodeOptions> {
-    id?: string
-    className?: string
-    style?: CSSProperties
-    containerProps?: Omit<HTMLAttributes<HTMLDivElement>, 'className' | 'style' | 'id'>
+  id?: string;
+  className?: string;
+  style?: CSSProperties;
+  containerProps?: Omit<HTMLAttributes<HTMLDivElement>, "className" | "style" | "id">;
 }
 
 export type CustomQRCodeRef = {
-    getContainer: () => HTMLDivElement | null
-    getInstance: () => CustomQRCodeClass | null
-}
+  getContainer: () => HTMLDivElement | null;
+  getInstance: () => CustomQRCodeClass | null;
+};
 
-export const CustomQRCode = forwardRef<CustomQRCodeRef, CustomQRCodeProps>(({
-    containerProps,
-    className,
-    style,
-    id,
-    ...options
-}, refProp) => {
-    const containerRef = useRef<HTMLDivElement>(null)
-    const instance = useRef<CustomQRCodeClass>()
+export const CustomQRCode = forwardRef<CustomQRCodeRef, CustomQRCodeProps>(
+  (
+    {
+      containerProps,
+      className,
+      style,
+      id,
+      //Options
+      type,
+      width,
+      height,
+      margin,
+      data,
+      image,
+      qrOptions,
+      imageOptions,
+      dotsOptions,
+      cornersSquareOptions,
+      cornersDotOptions,
+    },
+    refProp
+  ) => {
+    const containerRef = useRef<HTMLDivElement>(null);
+    const instance = useRef<CustomQRCodeClass>(null);
 
     useEffect(() => {
-        if (!containerRef.current) return
+      if (!containerRef.current) return;
 
-        if (instance.current) {
-            instance.current.update(options)
-            return
-        }
-        const customQrCode = new CustomQRCodeClass(options)
-        customQrCode.append(containerRef.current)
-        instance.current = customQrCode
-    }, [options])
+      if (instance.current) {
+        instance.current.update({
+          type,
+          width,
+          height,
+          margin,
+          data,
+          image,
+          qrOptions,
+          imageOptions,
+          dotsOptions,
+          cornersSquareOptions,
+          cornersDotOptions,
+        });
+        return;
+      }
+      const customQrCode = new CustomQRCodeClass({
+        type,
+        width,
+        height,
+        margin,
+        data,
+        image,
+        qrOptions,
+        imageOptions,
+        dotsOptions,
+        cornersSquareOptions,
+        cornersDotOptions,
+      });
+      customQrCode.append(containerRef.current);
+      instance.current = customQrCode;
+    }, [
+      type,
+      width,
+      height,
+      margin,
+      data,
+      image,
+      qrOptions,
+      imageOptions,
+      dotsOptions,
+      cornersSquareOptions,
+      cornersDotOptions,
+    ]);
 
-    useImperativeHandle(refProp, () => ({
+    useImperativeHandle(
+      refProp,
+      () => ({
         getContainer: () => containerRef.current || null,
-        getInstance: () => instance.current || null
-    }), [])
+        getInstance: () => instance.current || null,
+      }),
+      []
+    );
 
-    return (
-        <div
-            {...containerProps}
-            className={className}
-            style={style}
-            id={id}
-            ref={containerRef}
-        />
-    )
-})
+    return <div {...containerProps} className={className} style={style} id={id} ref={containerRef} />;
+  }
+);
