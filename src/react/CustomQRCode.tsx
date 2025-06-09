@@ -30,11 +30,11 @@ export const CustomQRCode = forwardRef<CustomQRCodeRef, CustomQRCodeProps>(
       margin,
       data,
       image,
-      qrOptions,
-      imageOptions,
-      dotsOptions,
-      cornersSquareOptions,
-      cornersDotOptions,
+      qrOptions = {},
+      imageOptions = {},
+      dotsOptions = {},
+      cornersSquareOptions = {},
+      cornersDotOptions = {},
     },
     refProp
   ) => {
