@@ -27,7 +27,7 @@ export const CustomQRCode = forwardRef<CustomQRCodeRef, CustomQRCodeProps>(
       type,
       width,
       height,
-      margin,
+      margin = 0,
       data,
       image,
       qrOptions = {},
