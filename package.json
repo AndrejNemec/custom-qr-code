@@ -1,6 +1,6 @@
 {
   "name": "custom-qr-code",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Add a style and an image to your QR code",
   "files": [
     "dist",
@@ -53,8 +53,8 @@
     "@types/react-dom": "^19.1.6"
   },
   "peerDependencies": {
-    "react": "^18",
-    "react-dom": "^18"
+    "react": "^19",
+    "react-dom": "^19"
   },
   "peerDependenciesMeta": {
     "react": {
